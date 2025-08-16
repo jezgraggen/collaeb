@@ -9,8 +9,10 @@
 <script src="https://makerspace-giessen.de/objects/aframe-ar.min.js"></script> -->
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 4x4_bch_13_9_3;">      
-        <a-marker type="pattern" url="text01.patt">
-            <a-entity obj-model="obj: url(model.obj)" scale="0.1 0.1 0.1"></a-entity>
+        <a-marker type="barcode" value="0">
+            <!--<a-marker type="pattern" url="text01.patt"> -->
+            <!--<a-entity obj-model="obj: url(model.obj)" scale="0.1 0.1 0.1"></a-entity> -->
+                <a-entity obj-model="obj: url(https://jezgraggen.github.io/SchS/AR/tinker.obj); mtl: url(https://jezgraggen.github.io/SchS/AR/obj.mtl)" scale="0.5 0.5 0.5"></a-entity>
         </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
