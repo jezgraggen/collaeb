@@ -65,13 +65,15 @@
 
       <a-marker type="barcode" value="0">
        <!-- der Code ist so vorbereitet, dass bis Wert 029 farblose Modelle kommen. 
-            Die Werte 30 bis 35 sind für farbige Objekte, dort braucht es noch eine .mtl-Datei mit dem gleichen Nummer! -->
+            Die Werte 30 bis 35 sind für farbige Objekte, dort braucht es noch eine .mtl-Datei mit dem gleichen Nummer! 
         <a-entity obj-model="obj: url(https://rdz-wattwil.github.io/kBwR/modelle/000.obj)"  
                  scale="0.1 0.1 0.1"               
                  rotation="-90 0 0"
                  class="clickable" 
                  gesture-handler="minScale: 0.25; maxScale: 10" 
-        ></a-entity>     
+        ></a-entity>  -->   
+        <a-image src="https://jezgraggen.github.io/AR-Studio/assets/riff_mit_korallen.jpg" scale="1 1 1" position="0 0 0" rotation="90 0 180">
+        </a-image>
       </a-marker>         
       <a-entity camera></a-entity>
     </a-scene>
