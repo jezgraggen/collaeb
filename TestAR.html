@@ -7,9 +7,6 @@
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
   
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
- 
   <!-- Dieses Script ist die Vorbereitung für den Info-Button. Der Text bei "alert" kann angepasst werden. -->
         <script>
             window.onload = function () {
@@ -51,12 +48,12 @@
   <body style='margin : 0px; overflow: hidden;'>
   
     <!-- Hier wird der Button eingefügt -> ist optional, wenn nicht gewünscht: 
-         die drei Zeichen am Ende der Zeile (- - >) hinter </div> verschieben: -
+         die drei Zeichen am Ende der Zeile (- - >) hinter </div> verschieben: -->
       <div class="buttons">
          <button class="say-hi-button">Info</button>
       </div>
     
- <!-- Hier wird die Szene eröffnet. matrixCodeType = Markersystem. Kann auch in ein anderes System geändert werden falls mehr Codes benötigt werden. -
+ <!-- Hier wird die Szene eröffnet. matrixCodeType = Markersystem. Kann auch in ein anderes System geändert werden falls mehr Codes benötigt werden. -->
     <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"        
         vr-mode-ui="enabled: false"
         gesture-detector
@@ -64,15 +61,15 @@
     >
  <!-- Hier startet jeweils die Suche nach einem Marker. 
       Der gesuchte Wert ist bei value=" " eingegeben -->
-      <!--<a-marker type="pattern" url="https://jezgraggen.github.io/collaeb/text01.patt"> 
----------------------
+      <a-marker type="pattern" url="https://jezgraggen.github.io/collaeb/text01.patt"> 
+<!---------------------
       <body style="margin : 0px; overflow: hidden;">
-  <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
+  <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
 
-  <!-- a-frame scene -->
+  <!-- a-frame scene -
   <a-scene
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
@@ -82,7 +79,7 @@
       
       <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
-    <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball'  -->
+    <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball'  -
     <a-nft
       type="nft"
       url="https://jezgraggen.github.io/collaeb/texttest2"
@@ -97,7 +94,7 @@
         scale="5 5 5"
         position="50 150 0"
       >
-      </a-entity>
+      </a-entity> -->
 
 
       <a-marker type="barcode" value="0">
@@ -111,8 +108,8 @@
         ></a-entity>  -->   
           <a-image src="https://jezgraggen.github.io/collaeb/StabZit_AR_Test2.png" scale="10 10 10" position="0 0 -5" rotation="90 0 90"> <!-- position x (+ = runter) y (+ = vorne) z (+ = links) -->
           </a-image>
-        </a-nft>
-      <!--  </a-marker> -->  
+       <!-- </a-nft> -->
+       </a-marker> 
       <a-entity camera></a-entity>
     </a-scene>
   </body>
