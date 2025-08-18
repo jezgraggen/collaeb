@@ -5,10 +5,6 @@
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
-  <!--  <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script> -->
-
   <style>
     .buttons {
       position: absolute;
@@ -38,32 +34,25 @@
 
 <body style='margin : 0px; overflow: hidden;'>
   
-    <!-- Hier wird der Button eingefügt -> ist optional, wenn nicht gewünscht: 
-         die drei Zeichen am Ende der Zeile (- - >) hinter </div> verschieben: -->
       <div class="buttons">
          <button class="say-hi-button">Info</button>
       </div>
     
- <!-- Hier wird die Szene eröffnet. matrixCodeType = Markersystem. Kann auch in ein anderes System geändert werden falls mehr Codes benötigt werden. -->
-    <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"        
+<!--    <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"  -->
+    <a-scene embedded arjs="trackingMethod: best; 
+          detectionMode: mono_and_matrix; 
+          matrixCodeType: 3x3;" 
         vr-mode-ui="enabled: false"
         gesture-detector
         id="scene"
     >
- <!-- Hier startet jeweils die Suche nach einem Marker. 
-      Der gesuchte Wert ist bei value=" " eingegeben -->
-      <!--<a-marker type="pattern" url="https://jezgraggen.github.io/collaeb/text01.patt"> -->
 
       <a-marker type="barcode" value="0">
-       <!-- der Code ist so vorbereitet, dass bis Wert 029 farblose Modelle kommen. 
-            Die Werte 30 bis 35 sind für farbige Objekte, dort braucht es noch eine .mtl-Datei mit dem gleichen Nummer! 
-        <a-entity obj-model="obj: url(https://rdz-wattwil.github.io/kBwR/modelle/000.obj)"  
-                 scale="0.1 0.1 0.1"               
-                 rotation="-90 0 0"
-                 class="clickable" 
-                 gesture-handler="minScale: 0.25; maxScale: 10" 
-        ></a-entity>  -->   
-        <a-image src="https://jezgraggen.github.io/collaeb/StabZit_AR_Test2.png" scale="10 10 10" position="0 0 -5" rotation="90 0 90"> <!-- position x (+ = runter) y (+ = vorne) z (+ = links) -->
+        <a-image 
+          src="https://jezgraggen.github.io/collaeb/StabZit_AR_Test2.png" 
+          scale="10 10 10" 
+          position="0 0 -5" 
+          rotation="90 0 90"> <!-- position x (+ = runter) y (+ = vorne) z (+ = links) -->
         </a-image>
       </a-marker>         
       <a-entity camera></a-entity>
